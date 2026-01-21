@@ -1,0 +1,1 @@
+La documentación técnica está completa, con todos los detalles relevantes sobre la arquitectura y los módulos principales del repositorio Reveal.js.
