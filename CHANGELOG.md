@@ -20,3 +20,32 @@ Update to version 5.2.1, featuring enhancements to the lightbox functionality, i
 - Minor adjustments to CSS styles related to viewport mechanics for smoother rendering on devices with smaller screens, ensuring better adaptability across devices.
 
 This update enhances both functionality and user experience, making it easier for presenters to effectively utilize multimedia within their presentations, while also maintaining a clear and well-structured documentation resource.
+
+--- Nuevo Cambio ---
+```markdown
+### [Actualización de 5.2.0 a 5.2.1] - 2026-01-23
+
+**Descripción**  
+En esta actualización se han realizado cambios significativos para mejorar la experiencia del usuario y la funcionalidad del sistema. Se ha corregido la URL de varios recursos en el archivo `README.md`, garantizando que los enlaces a imágenes y videos se dirijan a la ubicación correcta. Además, se han agregado nuevas características de "lightbox" en el sistema de presentación, permitiendo a los usuarios convertir elementos en una vista ampliada utilizando atributos como `data-preview-image` y `data-preview-video`. Estos cambios se realizaron para optimizar la visualización de contenido multimedia, mejorando la interactividad y la estética de las presentaciones para usuarios de dispositivos de pantalla más pequeña. También se realizaron ajustes en el CSS y JavaScript, como el cambio de z-index y adición de nuevas propiedades en el controlador de teclado, enfocándose en el manejo efectivo de la interfaz de usuario. El impacto para el usuario es notable, pues ahora podrán disfrutar de una visualización de contenido más rica y accesible.
+
+**Archivos modificados**  
+- `README.md`: Corregida la URL de la imagen para apuntar al nuevo origen.  
+- `css/reveal.scss`: Ajustes de estilo responsivo para el encabezado del overlay en pantallas pequeñas.  
+- `demo.html`: Se añadió nueva sección de "Lightbox" con ejemplos claros de uso y estructura de código.  
+- `examples/lightbox.html`: Modificación del título para reflejar el nuevo enfoque en “Lightbox”. Se añadieron ejemplos de uso de enlaces de previsualización.  
+- `js/controllers/keyboard.js`: Se añadieron nuevas funcionalidades para cerrar overlays mediante el teclado, mejorando la navegabilidad.  
+- `js/controllers/overlay.js`: Se redefinieron métodos para manejar las nuevas funcionalidades de lightbox, adaptando la interfaz y mejorando la gestión del estado de los previews.
+
+**Posibles mejoras futuras**  
+- Implementar soporte para más tipos de medios en lightbox, como audio o contenido embebido.  
+- Mejorar la experiencia de usuario añadiendo animaciones de transición al abrir y cerrar overlays.  
+- Integrar nuevos temas visuales que se adapten a las preferencias del usuario para la visualización de presentaciones.  
+- Optimizar aún más la interactividad respondiendo a gestos y acciones táctiles en dispositivos móviles.
+
+**Posibles problemas o riesgos de la release**  
+- Respuesta inesperada del overlay en navegadores antiguos que pueden no soportar algunas propiedades CSS nuevas.  
+- Riesgos asociados a enlaces externos que pueden cambiar, lo que afectaría la funcionalidad de previsualización de enlaces.  
+- Dependencias desactualizadas que podrían ocasionar errores de compatibilidad con las nuevas funcionalidades de lightbox.  
+- Cualquier error en la implementación del sistema de lightbox podría causar problemas de visualización, afectando la usabilidad del sistema de presentación.
+
+```
