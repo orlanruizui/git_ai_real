@@ -97,4 +97,31 @@ En esta actualización menor, se han realizado cambios significativos destinados
 - Existe el riesgo de que algunos usuarios no encuentren compatible la nueva funcionalidad de lightbox con sus navegadores, lo que podría afectar la experiencia general.
 - Potencial sobrecarga en la carga de presentaciones si se utilizan muchas imágenes o videos en "lightbox", afectando el rendimiento general de la aplicación en dispositivos de menor capacidad.
 - Inconsistencias visuales en diferentes navegadores debido a la implementación de nuevas características de estilo, lo cual debe ser probado exhaustivamente.
-- La reestructuración del código puede provocar conflictos con complementos de terceros que dependan de versiones anteriores del sistema, requiriendo ajustes adicionales.
+- La reestructuración del código puede provocar conflictos con complementos de terceros que dependan de versiones anteriores del sistema, requiriendo ajustes adicionales.### [Actualización de 5.2.0 a 5.2.1] - 2026-01-26
+
+**Descripción**  
+En esta actualización, hemos realizado significativas mejoras y correcciones en el framework de presentaciones HTML, revelando la versión 5.2.1. Uno de los cambios más destacados es la introducción de la funcionalidad de **lightbox**, que permite a los usuarios abrir imágenes y videos en ventanas emergentes. Esta funcionalidad mejora la experiencia del usuario, permitiendo una visualización más atractiva y organizada de los contenidos multimedia. Además, se han corregido múltiples vínculos en los ejemplos de documento (README.md, demo.html y markdown.html), asegurando que apuntan a las ubicaciones correctas, lo que mejora la integridad de la documentación.
+
+Desde una perspectiva técnica, también hemos hecho ajustes en el estilo de la interfaz responsiva mediante cambios en el archivo `reveal.scss`, que optimizan la visualización en pantallas más pequeñas. La implementación de nuevas propiedades CSS garantiza que todos los elementos sean fácilmente accesibles y visualizables sin comprometer la estética.
+
+Es fundamental que los usuarios de la aplicación realicen la actualización para beneficiarse de estas mejoras y evitar inconvenientes con las versiones anteriores que podrían no ser compatibles con los cambios recientes.
+
+**Archivos modificados**
+- `README.md`: Se corrigieron los vínculos de imágenes de 'Slides', apuntando a la ubicación correcta.
+- `css/reveal.scss`: Se añadieron reglas CSS para mejorar el diseño en dispositivos de menor tamaño y se ajustaron propiedades para elementos de overlay.
+- `demo.html`: Se agregó una sección sobre la nueva funcionalidad de lightbox, incluyendo ejemplos prácticos con imágenes y videos.
+- `examples/lightbox.html`: Se mejoró la visualización de ejemplos con lightbox.
+- `js/controllers/overlay.js`: Se optimizó el manejo de la funcionalidad de lightbox, actualizando los métodos para visualizar imágenes y videos.
+- `js/reveal.js`: Se actualizó la versión del software a 5.2.1 y se adaptaron funciones para incluir la nueva gestión de overlays.
+
+**Posibles mejoras futuras**
+- Implementar más tipos de contenido que pueden ser visualizados en lightbox, como PDFs y otros tipos de archivos multimedia.
+- Mejorar la accesibilidad del framework, garantizando que las presentaciones sean igualmente funcionales con tecnologías de asistencia.
+- Desarrollar un generador de plantillas para personalizar las presentaciones fácilmente desde una interfaz gráfica.
+- Establecer un sistema de feedback para recopilar opiniones de los usuarios sobre la funcionalidad de lightbox, lo que mejorará futuras iteraciones.
+
+**Posibles problemas o riesgos de la release**
+- La nueva funcionalidad de lightbox puede causar retrasos en la carga de las presentaciones si no se maneja adecuadamente en redes lentas.
+- Los cambios en los estilos CSS podrían generar inconsistencias de visualización en navegadores antiguos que no admiten algunas de las nuevas propiedades CSS.
+- Posibilidad de problemas de compatibilidad con plugins externos que alteran la gestión de los overlays.
+- Existen riesgos potenciales relacionados con la creación de nuevos eventos en el sistema y su manejo en tiempo real, lo que podría introducir bugs si no se prueba exhaustivamente.
