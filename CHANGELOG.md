@@ -181,4 +181,29 @@ El impacto para los usuarios es significativo, ya que pueden disfrutar de una ex
 - Necesidad de adecuar estilos CSS para diferentes navegadores, especialmente en dispositivos móviles, para asegurar una coherencia en la presentación.
 - Información insuficiente en el diff para detallar esta área en profundidad, lo que podría limitar la visibilidad de problemas en la implementación.
 
-Esta actualización refuerza nuestro compromiso de ofrecer una plataforma robusta y eficiente que respalde las necesidades de nuestros usuarios al presentar contenido multimedia de manera innovadora y atractiva.
+Esta actualización refuerza nuestro compromiso de ofrecer una plataforma robusta y eficiente que respalde las necesidades de nuestros usuarios al presentar contenido multimedia de manera innovadora y atractiva.### [Actualización de 5.2.0 a 5.2.1] - 2026-01-26
+
+**Descripción**  
+En esta actualización, se han realizado una serie de cambios significativos que mejoran las funcionalidades y la usabilidad de la biblioteca **reveal.js**. Se ha corregido un enlace en el archivo `README.md`, actualizando la URL de un banner relacionado con Slides para dirigirse a una nueva localización más estable. En el archivo `css/reveal.scss`, se implementaron ajustes en las dimensiones del encabezado en pantallas más pequeñas, para asegurar una mejor visualización en dispositivos móviles. Además, se añadió una nueva funcionalidad en el sistema de visualización, permitiendo la transformación de elementos en lightbox mediante el uso de atributos de datos específicos (data-preview-image y data-preview-video) en el archivo `demo.html`.
+
+Este cambio tiene un impacto positivo tanto para los desarrolladores como para los usuarios finales, mejorando la accesibilidad y el manejo de contenido multimedia dentro de las presentaciones. La experiencia de presentación se vuelve más inmersiva y fácil de navegar, beneficiando a todos aquellos que utilicen la herramienta en conferencias o clases. Sin embargo, es importante que los usuarios estén al tanto de las nuevas características y las posibles configuraciones que puedan necesitar, como ajustar los nuevos Anclajes de Lightbox en su contenido.
+
+**Archivos modificados**  
+- `README.md`: Se corrigió la URL del banner relacionado con Slides para reflejar la nueva localización.
+- `css/reveal.scss`: Se añadieron estilos para mejorar el encabezado de la vista en pantallas pequeñas.
+- `demo.html`: Se agregó un nuevo ejemplo de lightbox para la vista de imágenes y videos que ilustra su usabilidad.
+- `examples/lightbox.html`: Se modificó el título y se añadieron ejemplos sobre el uso del lightbox.
+- `js/controllers/overlay.js`: Se hicieron modificaciones en la lógica de presentación de imágenes y videos a través de la nueva funcionalidad de lightbox.
+- `js/reveal.js`: Se actualizó la versión del sistema a 5.2.1 y se ajustaron los métodos de preview.
+
+**Posibles mejoras futuras**  
+- Integrar soporte para vista previa de otros tipos de contenido, como presentaciones de PDF o documentos.
+- Optimizar los tiempos de carga y la eficiencia del sistema en presentaciones con contenido audiovisual pesado.
+- Mejora de documentación y ejemplos para facilitar la implementación de la nueva funcionalidad de lightbox.
+- Realizar pruebas de usabilidad enfocadas en dispositivos móviles para asegurar que la presentación responda fluidamente.
+
+**Posibles problemas o riesgos de la release**  
+- Al introducir cambios en la forma de manejar los elementos de vista previa, puede haber confusiones con implementaciones existentes que rely en los métodos anteriores.
+- Potenciales bugs que podrían surgir con el nuevo sistema de lightbox en configuraciones no estándar de navegadores.
+- Los cambios en los estilos podrían afectar a presentaciones ya existentes que no se han probado con la nueva actualización.
+- Necesidad de capacitación o soporte adicional para usuarios que no están familiarizados con la nueva funcionalidad de lightbox, ya que puede resultar en una curva de aprendizaje.
