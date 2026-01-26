@@ -152,4 +152,33 @@ Como resultado de estas modificaciones, se espera que los usuarios puedan disfru
 1. Aumento en el tiempo de carga de las presentaciones que utilizan múltiples elementos de Lightbox, especialmente en conexiones lentas.
 2. Incompatibilidades con versiones anteriores del navegador que no soportan algunas de las nuevas características.
 3. Posibles errores visuales en la implementación de overlays en dispositivos específicos, lo que podría degradar la experiencia del usuario.
-4. Problemas relacionados con la gestión de eventos en navegadores que no manejan correctamente las nuevas funciones de Lightbox.
+4. Problemas relacionados con la gestión de eventos en navegadores que no manejan correctamente las nuevas funciones de Lightbox.### [Actualización de 5.2.0 a 5.2.1] - 2026-01-26
+
+**Descripción**  
+En esta actualización, realizada desde la versión 5.2.0 a la 5.2.1, se han realizado diversas mejoras y correcciones que favorecen la experiencia del usuario y la funcionalidad del sistema. Entre los cambios más destacados se encuentra la implementación de un nuevo sistema de Lightbox que permite a los usuarios ver imágenes, videos e iframes dentro de presentaciones de manera más intuitiva y efectiva. Con este nuevo sistema, cualquier elemento puede convertirse en un Lightbox utilizando los atributos de `data-preview-image` y `data-preview-video`, lo que mejora la interacción visual durante las presentaciones. 
+
+Este desarrollo se llevó a cabo para brindar una experiencia de usuario más rica y atractiva, eliminando la necesidad de abrir enlaces externos para visualizar contenido multimedia, lo cual beneficiará a los presentadores y audiencias al mantener la atención dentro de la presentación. La incorporación de nuevas capacidades también permite al sistema manejar mejor los eventos de previsualización, asegurando que los elementos multimedia se carguen de manera efectiva sin afectar el rendimiento general de la aplicación.
+
+El impacto para los usuarios es significativo, ya que pueden disfrutar de una experiencia más involucrante y visualmente coherente sin interrumpir el flujo de la presentación. Asimismo, las modificaciones en la parte CSS para adaptar el tamaño del encabezado en dispositivos más pequeños mejoran la accesibilidad y la usabilidad del sistema en diferentes plataformas.
+
+**Archivos modificados**  
+- **README.md**: Se actualizó el enlace de la imagen del banner de Slides para apuntar a la nueva ubicación.  
+- **css/reveal.scss**: Se agregaron estilos en media queries para optimizar el diseño en pantallas pequeñas, ajustando la altura del encabezado del overlay.  
+- **demo.html**: Se añadió una nueva sección para mostrar el funcionamiento del Lightbox con ejemplos prácticos de imágenes y videos.  
+- **examples/lightbox.html**: Se mejoró el título de la página a "Ligthbox" para reflejar las nuevas funcionalidades y se añadieron ejemplos de uso del Lightbox.  
+- **js/controllers/overlay.js**: Se modificaron los métodos de previsualización para abrir Lightboxes en vez de nuevos iframes, mejorando el flujo de interacción.  
+- **js/reveal.js**: Se realizó la actualización de la versión de 5.2.0 a 5.2.1, reflejando el estado actual del proyecto.  
+
+**Posibles mejoras futuras**  
+- Implementación de una funcionalidad para la manipulación de los contenidos del Lightbox (ej. desplazamiento entre imágenes/videos).
+- Agregar soporte multi-idioma para los mensajes y descripciones en Lightbox.
+- Mejorar la documentación para incluir ejemplos más detallados de la nueva funcionalidad de Lightbox.
+- Establecer pruebas automatizadas para verificar la correcta carga y funcionamiento de los elementos en el Lightbox.
+
+**Posibles problemas o riesgos de la release**  
+- Riesgo de regresiones en las interacciones previas que podrían accidentarse con la nueva funcionalidad de Lightbox.
+- Posibles problemas de rendimiento si se incorpora un gran volumen de contenido multimedia en las presentaciones.
+- Necesidad de adecuar estilos CSS para diferentes navegadores, especialmente en dispositivos móviles, para asegurar una coherencia en la presentación.
+- Información insuficiente en el diff para detallar esta área en profundidad, lo que podría limitar la visibilidad de problemas en la implementación.
+
+Esta actualización refuerza nuestro compromiso de ofrecer una plataforma robusta y eficiente que respalde las necesidades de nuestros usuarios al presentar contenido multimedia de manera innovadora y atractiva.
