@@ -75,4 +75,26 @@ Adicionalmente, se ha incorporado la función de "lightbox", permitiendo a los u
 - Riesgo de que algunos enlaces multimedia quedaran rotos si los recursos externos aún dependen de URLs temporales o de implementación manual.
 - Compatibilidad con navegadores más antiguos podría ser cuestionable, especialmente en dispositivos móviles con limitaciones en el soporte de CSS o Javascript.
 - La nueva funcionalidad de lightbox podría no ser intuitiva para todos los usuarios, lo que podría requerir soporte adicional o capacitación de los usuarios.
-- Es posible que se generen problemas de usabilidad si múltiples elementos interactivos son utilizados simultáneamente en una misma diapositiva, lo que podría confundir a los usuarios.
+- Es posible que se generen problemas de usabilidad si múltiples elementos interactivos son utilizados simultáneamente en una misma diapositiva, lo que podría confundir a los usuarios.### [Actualización de 5.2.0 a 5.2.1] - 2026-01-26
+
+**Descripción**  
+En esta actualización menor, se han realizado cambios significativos destinados a mejorar la experiencia del usuario y la funcionalidad del sistema. Uno de los cambios más relevantes es la implementación de un nuevo sistema de "lightbox" que permite a los usuarios visualizar imágenes y videos directamente dentro de las presentaciones, facilitando el acceso a contenido relacionado sin necesidad de salir de la presentación. Este sistema se activa a través de atributos HTML específicos, ofreciendo un método elegante para enriquecer la interactividad. También se han corregido enlaces en el código, asegurando que apunten correctamente a los recursos adecuados, lo que mejora la seguridad y la confianza en las presentaciones. Además, se ha ajustado el estilo en las hojas de estilo SCSS, optimizando el diseño de la presentación en dispositivos de menor resolución, lo que resulta en una experiencia más uniforme y accesible. Estos cambios significan que los usuarios podrán disfrutar de presentaciones más dinámicas y visualmente atractivas, sin importar el dispositivo en el que se visualicen.
+
+**Archivos modificados**
+- `README.md`: Actualización de enlaces de imágenes para que apunten a la URL correcta, mejorando así la accesibilidad del contenido.
+- `css/reveal.scss`: Se añadieron estilos responsivos para la visualización en dispositivos menores, garantizando que la experiencia se mantenga coherente independientemente del tamaño de la pantalla.
+- `demo.html`: Inclusión de ejemplos de uso del nuevo sistema de lightbox para visualización de imágenes y videos, enriqueciendo la documentación y facilitando el aprendizaje para los usuarios.
+- `js/controllers/overlay.js`: Reestructuración del manejo de la vista previa, con la introducción de métodos para manejar correctamente la visualización de "lightbox" para diferentes tipos de contenido.
+- `js/reveal.js`: Actualización de la versión del sistema a 5.2.1, reflejando los cambios y mejoras realizados.
+
+**Posibles mejoras futuras**
+- Integración de un sistema de notificaciones para alertar a los usuarios sobre nuevos recursos o actualizaciones de contenido en tiempo real.
+- Desarrollo de una función que permita al usuario personalizar el diseño de la lightbox según sus preferencias, aumentando la personalización de la experiencia.
+- Implementación de un soporte más avanzado para contenido multimedia, como la posibilidad de añadir sonidos o música de fondo a las presentaciones.
+- Mejora de la compatibilidad con navegadores antiguos, asegurando que la mayor cantidad de usuarios posible puedan acceder a todas las funcionalidades de la herramienta.
+
+**Posibles problemas o riesgos de la release**
+- Existe el riesgo de que algunos usuarios no encuentren compatible la nueva funcionalidad de lightbox con sus navegadores, lo que podría afectar la experiencia general.
+- Potencial sobrecarga en la carga de presentaciones si se utilizan muchas imágenes o videos en "lightbox", afectando el rendimiento general de la aplicación en dispositivos de menor capacidad.
+- Inconsistencias visuales en diferentes navegadores debido a la implementación de nuevas características de estilo, lo cual debe ser probado exhaustivamente.
+- La reestructuración del código puede provocar conflictos con complementos de terceros que dependan de versiones anteriores del sistema, requiriendo ajustes adicionales.
