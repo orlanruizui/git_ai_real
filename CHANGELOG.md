@@ -124,4 +124,32 @@ Es fundamental que los usuarios de la aplicación realicen la actualización par
 - La nueva funcionalidad de lightbox puede causar retrasos en la carga de las presentaciones si no se maneja adecuadamente en redes lentas.
 - Los cambios en los estilos CSS podrían generar inconsistencias de visualización en navegadores antiguos que no admiten algunas de las nuevas propiedades CSS.
 - Posibilidad de problemas de compatibilidad con plugins externos que alteran la gestión de los overlays.
-- Existen riesgos potenciales relacionados con la creación de nuevos eventos en el sistema y su manejo en tiempo real, lo que podría introducir bugs si no se prueba exhaustivamente.
+- Existen riesgos potenciales relacionados con la creación de nuevos eventos en el sistema y su manejo en tiempo real, lo que podría introducir bugs si no se prueba exhaustivamente.### [Actualización de 5.2.0 a 5.2.1] - 2026-01-26
+
+**Descripción**  
+En la versión 5.2.1 de reveal.js, se han realizado una serie de cambios significativos que mejoran tanto la experiencia de usuario como el rendimiento del sistema. En primer lugar, el cambio más destacado es la introducción de la funcionalidad de Lightbox, que permite a los usuarios convertir elementos en una ventana emergente para mostrar imágenes y videos de manera más interactiva y visualmente atractiva. Este cambio responde a la necesidad de facilitar la visualización de contenido multimedia dentro de las presentaciones, enriqueciendo la interacción del público y haciendo que las presentaciones sean más dinámicas.
+
+Además, se han realizado mejoras en el estilo y el comportamiento de los overlays, ajustando sus parámetros de diseño para que se integren de forma más armónica en diversas resoluciones de pantalla. Este ajuste es particularmente importante para la experiencia móvil, donde los usuarios pueden encontrarse con diferentes dimensiones de pantalla. Se ha reducido el z-index de algunos elementos, lo que optimiza su superposición y mejora la estética de las presentaciones.
+
+Como resultado de estas modificaciones, se espera que los usuarios puedan disfrutar de presentaciones más profesionales y atractivas. Sin embargo, se destaca que, aunque se han llevado a cabo pruebas para asegurar la funcionalidad, siempre existe la posibilidad de que surjan problemas con la implementación en diferentes entornos o configuraciones. Se recomienda a los usuarios que verifiquen sus presentaciones tras actualizar a esta nueva versión.
+
+**Archivos modificados**
+- `README.md`: Se corrije la URL de las imágenes de banner para utilizar una dirección directa en lugar de un enlace a Amazon S3.
+- `css/reveal.scss`: Se añade un ajuste para el tamaño del encabezado del overlay en dispositivos de menor tamaño.
+- `demo.html`: Se introduce una nueva sección de Lightbox, facilitando ejemplos prácticos de uso.
+- `examples/lightbox.html`: Se actualizan los títulos y se añaden ejemplos relacionados con el uso de Lightbox.
+- `js/controllers/overlay.js`: Se reorganizan las funciones de gestión del overlay, incluidas las nuevas incorporaciones para manejar la funcionalidad de Lightbox.
+- `js/reveal.js`: Se actualiza la versión del framework y se incorpora el nuevo manejo del estado del overlay.
+- `package.json`: Se actualiza la versión del proyecto a 5.2.1.
+
+**Posibles mejoras futuras**
+1. Implementar soporte para más tipos de contenido en Lightbox, como *.pdf* o presentación de *slides*.
+2. Mejorar la accesibilidad de los overlays para usuarios que utilizan tecnologías asistidas.
+3. Añadir animaciones personalizables para la apertura y cierre de Lightbox, brindando una experiencia más fluida.
+4. Desarrollar documentación más detallada y ejemplos de uso para facilitar la adopción de la nueva funcionalidad por parte de los usuarios.
+
+**Posibles problemas o riesgos de la release**
+1. Aumento en el tiempo de carga de las presentaciones que utilizan múltiples elementos de Lightbox, especialmente en conexiones lentas.
+2. Incompatibilidades con versiones anteriores del navegador que no soportan algunas de las nuevas características.
+3. Posibles errores visuales en la implementación de overlays en dispositivos específicos, lo que podría degradar la experiencia del usuario.
+4. Problemas relacionados con la gestión de eventos en navegadores que no manejan correctamente las nuevas funciones de Lightbox.
