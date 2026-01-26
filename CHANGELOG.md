@@ -206,4 +206,29 @@ Este cambio tiene un impacto positivo tanto para los desarrolladores como para l
 - Al introducir cambios en la forma de manejar los elementos de vista previa, puede haber confusiones con implementaciones existentes que rely en los métodos anteriores.
 - Potenciales bugs que podrían surgir con el nuevo sistema de lightbox en configuraciones no estándar de navegadores.
 - Los cambios en los estilos podrían afectar a presentaciones ya existentes que no se han probado con la nueva actualización.
-- Necesidad de capacitación o soporte adicional para usuarios que no están familiarizados con la nueva funcionalidad de lightbox, ya que puede resultar en una curva de aprendizaje.
+- Necesidad de capacitación o soporte adicional para usuarios que no están familiarizados con la nueva funcionalidad de lightbox, ya que puede resultar en una curva de aprendizaje.### [Actualización de 5.2.0 a 5.2.1] - 2026-01-26
+
+**Descripción**  
+En esta actualización a la versión 5.2.1, se han realizado numerosos cambios significativos enfocados en mejorar la experiencia del usuario y optimizar la funcionalidad general del framework de presentaciones HTML, reveal.js. Uno de los cambios más notables es la introducción de la funcionalidad de "Lightbox", que permite a los usuarios convertir cualquier elemento en una ventana emergente visual mediante atributos de datos específicos. Esto es particularmente útil para mostrar imágenes y videos de forma más interactiva y amigable. Además, se han corregido enlaces rotos hacia recursos externos en el archivo README.md, mejorando así la fiabilidad de los recursos citados.
+
+Los cambios en los archivos CSS también son destacados, ya que se han hecho ajustes en las propiedades de las vistas, lo que contribuye a una experiencia de visualización más responsiva en dispositivos móviles. Esto asegurará que las presentaciones se muestren correctamente, independientemente del tamaño de la pantalla. Además, se han realizado modificaciones en el código fuente para optimizar el comportamiento del teclado, lo que mejorará la navegación durante las presentaciones. Estos cambios, en conjunto, ofrecen una mejora en la estabilidad del sistema y una experiencia más fluida para el usuario final.
+
+**Archivos modificados**
+- **README.md**: Se corrigieron enlaces a imágenes, asegurando que redirijan a los recursos correctos.
+- **css/reveal.scss**: Se añadieron estilos para responsividad en dispositivos móviles, mejorando la visualización de encabezados.
+- **demo.html**: Se incluyó una nueva sección de "Lightbox" explicando cómo usar elementos de vista previa.
+- **js/controllers/overlay.js**: Se introdujeron nuevos métodos para mostrar la funcionalidad de "Lightbox", mejorando la gestión de elementos visuales.
+- **js/reveal.js**: Se actualizaron las funciones para incluir los nuevos métodos de "Lightbox", mejorando la navegación en las presentaciones.
+- **examples/lightbox.html**: Se añadió un ejemplo de uso de la nueva funcionalidad, facilitando a los usuarios la comprensión de su aplicación.
+
+**Posibles mejoras futuras**
+- Integrar más opciones de personalización para las vistas de "Lightbox", como transiciones y estilos adicionales.
+- Desarrollar y documentar ejemplos más avanzados que utilicen la funcionalidad de "Lightbox" para inspirar a los usuarios en la creación de presentaciones más dinámicas.
+- Implementar un sistema de ayuda interactivo que explique las nuevas funcionalidades dentro de la misma aplicación.
+- Realizar pruebas en una gama más amplia de dispositivos para asegurar que la responsividad funcione correctamente en todos los escenarios.
+
+**Posibles problemas o riesgos de la release**
+- La nueva funcionalidad de "Lightbox" puede introducir nuevos errores que quizás no se hayan detectado en pruebas iniciales, lo que podría afectar la experiencia del usuario.
+- El cambio en los identificadores de los métodos puede causar problemas de compatibilidad con plugins o extensiones existentes que no han sido actualizadas.
+- Al tener más elementos interactivos, podría surgir un problema de rendimiento en dispositivos más antiguos o de menor capacidad.
+- Información insuficiente en el diff para detallar efectos secundarios específicos que puedan surgir a partir de la implementación de la nueva funcionalidad, requiriendo atención continua tras la release.
