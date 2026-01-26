@@ -24,4 +24,31 @@ El impacto para los usuarios es notable, ya que con estos cambios no solo se opt
 1. La actualización de las URL en el README.md podría causar enlaces rotos si no se implementa correctamente en entornos donde se almacenen versiones antiguas.  
 2. Los nuevos estilos responsivos podrían no ser compatibles con navegadores más antiguos, provocando problemas visuales en algunos dispositivos.  
 3. La nueva funcionalidad del Lightbox puede generar confusiones si los usuarios no están familiarizados con su uso, lo que puede llevar a una mala experiencia.  
-4. Posibles conflictos con extensiones de terceros que manipulan el DOM y que podrían interferir con el funcionamiento del nuevo sistema de previsualización.
+4. Posibles conflictos con extensiones de terceros que manipulan el DOM y que podrían interferir con el funcionamiento del nuevo sistema de previsualización.### [Actualización de 5.2.0 a 5.2.1] - 2026-01-26
+
+**Descripción**  
+En esta actualización, se han realizado diversas mejoras y correcciones en el framework de presentaciones HTML, reveal.js, culminando en la versión 5.2.1. Entre los cambios más destacados, se incluye la modificación de varias URLs, reemplazando enlaces a recursos en AWS S3 por URLs directas que proporcionan mayor estabilidad y rendimiento. Asimismo, se ha introducido un nuevo mecanismo para gestionar una funcionalidad de lightbox, que permite a los usuarios visualizar imágenes y videos de manera más efectiva al hacer clic en elementos relevantes. Esta funcionalidad no solo mejora la experiencia del usuario al permitir la visualización de medios en un formato ampliado, sino que también optimiza el uso de los recursos al disminuir requerimientos de carga adicionales innecesarios.
+
+Otro aspecto importante de esta actualización es la mejora en la gestión del evento de teclado, que ahora previene la interacción no deseada con overlays abiertos. Esta atención al detalle evita posibles frustraciones para los usuarios durante las presentaciones, asegurando que la experiencia sea fluida. En general, estos cambios son parte de un esfuerzo continuo por mejorar la usabilidad y la calidad del sistema, garantizando que se mantenga a la vanguardia de las expectativas modernas de los usuarios.
+
+**Archivos modificados**  
+- **README.md**: Se actualizaron las URLs de banners de Slides para apuntar a recursos más confiables.  
+- **css/reveal.scss**: Se añadieron media queries para adaptar el diseño de overlay en dispositivos más pequeños.  
+- **demo.html**: Se introdujo una sección para ejemplificar la nueva funcionalidad de lightbox, mostrando cómo utilizar etiquetas de previsualización en imágenes y videos.  
+- **examples/lightbox.html**: Se cambió el título y se implementaron ejemplos relevantes para la nueva funcionalidad de lightbox.  
+- **js/controllers/keyboard.js**: Se añadió lógica para mejorar el manejo de eventos de teclado, especialmente cuando un overlay está activo.  
+- **js/controllers/overlay.js**: Se implementó un nuevo sistema para gestionar la previsualización de elementos, mejorando interacciones y estados de los overlays.  
+- **js/reveal.js**: Se actualizó la versión del framework a 5.2.1 y se ajustaron referencias a nuevos métodos de previsualización.  
+- **package.json**: Se actualizó la versión del paquete a 5.2.1.
+
+**Posibles mejoras futuras**  
+- Implementar animaciones o transiciones más suaves entre la apertura y cierre de lightboxes para mejorar la estética visual.  
+- Añadir soporte para previsualizaciones de otros tipos de medios, como PDFs o presentaciones de diapositivas.  
+- Mejorar la optimización de cargas en dispositivos móviles para asegurar una rápida accesibilidad a todos los elementos multimedia.  
+- Desarrollar una interfaz de configuración más intuitiva que permita a los usuarios ajustar funciones del overlay sin necesidad de codificación.
+
+**Posibles problemas o riesgos de la release**  
+- La dependencia de URLs directas podría crear problemas si los recursos no están adecuadamente gestionados o si hay interrupciones en el servicio.  
+- Los cambios en los scripts de manejo de eventos podrían generar conflictos con funciones anteriores si no se actualizan adecuadamente los estilos o métodos.  
+- Las nuevas funcionalidades de lightbox podrían comportarse de manera inesperada en navegadores antiguos, afectando la experiencia del usuario.  
+- Riesgos de compatibilidad con plugins de terceros que dependen de eventos que están siendo modificados en esta actualización.
