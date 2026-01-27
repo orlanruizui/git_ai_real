@@ -231,4 +231,29 @@ Los cambios en los archivos CSS también son destacados, ya que se han hecho aju
 - La nueva funcionalidad de "Lightbox" puede introducir nuevos errores que quizás no se hayan detectado en pruebas iniciales, lo que podría afectar la experiencia del usuario.
 - El cambio en los identificadores de los métodos puede causar problemas de compatibilidad con plugins o extensiones existentes que no han sido actualizadas.
 - Al tener más elementos interactivos, podría surgir un problema de rendimiento en dispositivos más antiguos o de menor capacidad.
-- Información insuficiente en el diff para detallar efectos secundarios específicos que puedan surgir a partir de la implementación de la nueva funcionalidad, requiriendo atención continua tras la release.
+- Información insuficiente en el diff para detallar efectos secundarios específicos que puedan surgir a partir de la implementación de la nueva funcionalidad, requiriendo atención continua tras la release.### [Actualización de 5.2.0 a 5.2.1] - 2026-01-27
+
+**Descripción**  
+En la versión 5.2.1 de reveal.js, se han realizado varios cambios significativos que mejoran la experiencia del usuario y la funcionalidad del sistema. Uno de los cambios más destacados es la transición de la gestión de previsualizaciones a un modelo de 'lightbox'. Esto permite a los usuarios interactuar de una manera más intuitiva con los elementos multimedia, donde ahora pueden ver tanto imágenes como videos dentro de un overlay que se abre con un clic. Este cambio fue impulsado por la necesidad de optimizar la presentación de contenido multimedia y mejorar la interacción del usuario, haciéndola más fluida y atractiva. Además, se ajustó el sistema de gestión de eventos para que todos los elementos multimedia ahora respondan de manera coherente y de forma centralizada. A nivel de interfaz, también se ha llevado a cabo una modificación en la disposición y medición de algunos componentes, asegurando que la presentación se vea bien en dispositivos más pequeños, ayudando a mantener la responsividad en una variedad de plataformas. Los cambios hechos en esta actualización contribuirán a una experiencia de usuario más rica y mejorarán la usabilidad general del framework.
+
+**Archivos modificados**  
+- README.md: Se actualizó la URL de Slides para apuntar a un host seguro.
+- css/reveal.scss: Se añadieron estilos adicionales para asegurar un correcto ajuste del overlay en pantallas pequeñas.
+- demo.html: Se introdujo una nueva sección de 'Lightbox' que muestra cómo activar esta nueva funcionalidad.
+- js/controllers/overlay.js: Se refactorizaron los métodos relacionados con las previsualizaciones para adoptar el concepto de lightbox.
+- js/reveal.js: Se actualizó la versión de la biblioteca a 5.2.1 y se modificaron los métodos para reflejar los cambios en la gestión de overlays.
+- package.json: Se actualizó la versión para reflejar la nueva versión.
+
+**Posibles mejoras futuras**  
+- Implementar un sistema de plantillas para personalizar el aspecto del lightbox.
+- Añadir soporte para previsualización de otros tipos de contenido multimedia, como audio o enlaces externos de presentación.
+- Mejorar el sistema de gestión de atajos de teclado para controlar la navegación en el lightbox.
+- Desarrollar una opción para guardar las configuraciones de presentación personalizadas.
+
+**Posibles problemas o riesgos de la release**  
+- La nueva funcionalidad de lightbox puede causar confusión entre los usuarios habituados a la forma anterior de gestionar previsualizaciones.
+- Cambios en el sistema de eventos pueden resultar en problemas de compatibilidad con plugins existentes.
+- Los cambios en el CSS para responsividad pueden no funcionar correctamente en todos los navegadores, lo que podría afectar a los usuarios que utilicen versiones más antiguas.
+- La refactorización de métodos puede producir efectos secundarios no deseados si no se realizan pruebas exhaustivas.
+
+Estos elementos son cruciales para asegurar una entrega exitosa y continuar con la evolución de la herramienta.
