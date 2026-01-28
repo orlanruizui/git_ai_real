@@ -397,4 +397,26 @@ Esta estructura asegura un entendimiento completo y contextualizado del `merge`.
 - Es crucial verificar que los cambios realizados en la estructura del contenido no afecten la funcionalidad de navegación dentro de la presentación.
 - La modificación del título HTML y los cambios introducidos en los slides deben revisarse para asegurar que no interfieran con CSS preexistente, especialmente en términos de estilos responsivos.
 - Se recomienda probar los cambios en varios navegadores para asegurar compatibilidad, especialmente en navegadores y dispositivos móviles antiguos.
-- Evaluar posibles conflictos tras el merge, especialmente si hay otras ramas que han modificado elementos en el mismo archivo.
+- Evaluar posibles conflictos tras el merge, especialmente si hay otras ramas que han modificado elementos en el mismo archivo.## Pull Request Title: merge. Created: 2026-01-21T17:05:29Z. Status: open
+
+- The page title in the index.html file has been changed from "reveal.js" to "Axet Reveal Deck", which enhances the project’s brand identity.
+- Additional slides have been added to the presentation, improving content organization and user experience.
+- A note specifically for reviewers has been introduced within the slide content to facilitate and streamline the review process.
+
+## Cambios detallados
+
+- **UI:**
+  - **index.html:**
+    - **Before:** The page title was "reveal.js".
+    - **After:** The page title has been updated to "Axet Reveal Deck", providing a more personalized touch associated with the project.
+    - **Slides:**
+      - **Slide 1:** Now includes a heading ("Slide 1"), a paragraph ("Demo change for merge notes"), and an aside element for review notes. Previously, it only had the text "Slide 1".
+      - **Slide 2:** Remained unchanged in structure but offers continuity to the newly organized content framework.
+      - **Slide 3:** Added a new slide with a heading (h3) "Slide 3" and a paragraph ("Added a third slide to generate a clean diff"). This inclusion creates a more comprehensive flow of slides and adds depth to the presentation.
+
+## Riesgos / puntos de atención
+
+- There is a need to ensure the updates to the slide structure, such as the additional HTML elements and the reorganization, do not disrupt the existing navigation functionalities that users rely upon.
+- Confirm that the new and existing styles in reveal.css accommodate the changes in slide structure, maintaining visual consistency and responsiveness across different devices.
+- It is vital to test the presentation in different environments to ascertain that these changes were merged correctly and do not affect related modules or previous merge inputs negatively.
+- Attention should be given to any potential conflicts arising from the altered presentation identity and slide restructuring, especially in environments using previous versions.
