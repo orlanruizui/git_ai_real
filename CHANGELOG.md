@@ -307,4 +307,32 @@ Adicionalmente, se ha introducido una nueva funcionalidad de 'lightbox' que perm
 - Posibles fallos en la carga de recursos multimedia debido a las nuevas URL, si los enlaces no están correctamente actualizados en todas partes.  
 - La nueva funcionalidad de lightbox podría generar confusión si los usuarios no están familiarizados con ella, lo que podría afectar la usabilidad inicial.  
 - Cambios en los estilos CSS podrían generar conflictos con otras funcionalidades existentes, afectando la experiencia de usuario.  
-- Información insuficiente en el diff para detallar los impactos específicos de los eventos de JavaScript relacionados con la nueva funcionalidad de la lightbox.
+- Información insuficiente en el diff para detallar los impactos específicos de los eventos de JavaScript relacionados con la nueva funcionalidad de la lightbox.### [Actualización de 5.2.0 a 5.2.1] - 2026-01-28
+
+**Descripción**  
+En la actualización de la versión 5.2.0 a 5.2.1 de reveal.js, se realizaron una serie de modificaciones significativas en diversos archivos que mejoran tanto la estética como la funcionalidad de las presentaciones. Uno de los cambios más destacados es la corrección de enlaces a recursos externos, como imágenes y videos, que ahora apuntan correctamente a las URLs adecuadas. Este ajuste evita errores al cargar contenido multimedia en las presentaciones y mejora la experiencia del usuario. 
+
+Además, se introdujo un nuevo sistema de "lightbox" que permite a los usuarios convertir cualquier elemento en una vista previa ampliada, ya sea una imagen o un video, facilitando así una visualización más atractiva y accesible durante las presentaciones. El propósito de estos cambios fue no solo mejorar la usabilidad de la plataforma, sino también asegurar que los recursos sean accesibles y se integren sin problemas en diferentes entornos, especialmente en dispositivos móviles. Esta nueva funcionalidad es particularmente beneficiosa para los presentadores, ya que permite mostrar contenido multimedia de manera más fluida durante las presentaciones. 
+
+Para el usuario, estos cambios significan una experiencia más rica y visualmente agradable. Al utilizar estas nuevas características, los presentadores pueden involucrar mejor a su audiencia y hacer que sus presentaciones sean más interactivas y dinámicas. Se recomienda a los usuarios que actualicen a la nueva versión para beneficiarse de estas mejoras.
+
+**Archivos modificados**  
+- README.md: se actualizaron enlaces a recursos externos para apuntar a las nuevas URL correctas.  
+- css/reveal.scss: se añadieron estilos CSS para optimizar la visualización en dispositivos de menor tamaño y ajustar correctamente el diseño del encabezado del overlay.  
+- demo.html: se incorporó una nueva sección que muestra cómo implementar la función "lightbox" para imágenes y videos.  
+- js/controllers/keyboard.js: se mejoraron las interacciones del teclado, permitiendo cerrar overlays mediante la tecla "C".  
+- js/controllers/overlay.js: se implementó un nuevo sistema de lightbox para la visualización de imágenes, videos e iframes, mejorando la gestión de los estados de los overlays.  
+- js/reveal.js: se actualizó la versión de la biblioteca a 5.2.1 y se realizaron ajustes en las funciones de gestión de previews.  
+- examples/lightbox.html: se creó un nuevo archivo de ejemplo para demostrar el uso de la función "lightbox".  
+
+**Posibles mejoras futuras**  
+- Incorporar un sistema de notificaciones que informe al usuario cuando un recurso multimedia no esté disponible.
+- Mejorar la compatibilidad con dispositivos y navegadores antiguos para asegurar la funcionalidad universal de los features nuevos.
+- Desarrollar guías interactivas para los nuevos usuarios que muestren cómo utilizar la funcionalidad de lightbox de manera efectiva.
+- Integrar más opciones de personalización para los overlays, permitiendo a los usuarios ajustar el estilo y comportamiento según sus necesidades.
+
+**Posibles problemas o riesgos de la release**  
+- La adaptación de los nuevos enlaces puede ocasionar problemas de carga si no se actualizan correctamente en todos los documentos relacionados.
+- Existen riesgos potenciales de compatibilidad con estilos CSS antiguos, lo que podría llevar a visualizaciones no deseadas en algunos navegadores.
+- La implementación del sistema de lightbox podría causar conflictos con presentaciones que dependan de interacciones previas, especialmente en slides más complejos.
+- Información insuficiente en el diff para detallar el impacto de los cambios realizados en archivos binarios.
