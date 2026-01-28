@@ -256,4 +256,29 @@ En la versión 5.2.1 de reveal.js, se han realizado varios cambios significativo
 - Los cambios en el CSS para responsividad pueden no funcionar correctamente en todos los navegadores, lo que podría afectar a los usuarios que utilicen versiones más antiguas.
 - La refactorización de métodos puede producir efectos secundarios no deseados si no se realizan pruebas exhaustivas.
 
-Estos elementos son cruciales para asegurar una entrega exitosa y continuar con la evolución de la herramienta.
+Estos elementos son cruciales para asegurar una entrega exitosa y continuar con la evolución de la herramienta.### [Actualización de 5.2.0 a 5.2.1] - 2026-01-28
+
+**Descripción**  
+En esta actualización de la versión 5.2.0 a la 5.2.1 de reveal.js, se han realizado importantes mejoras y correcciones que impactan tanto en la funcionalidad como en la experiencia del usuario. Entre los cambios más destacados, se incluye la migración de los enlaces de recursos multimedia, lo que asegura que las imágenes y videos sean cargados desde fuentes correctas y actualizadas, evitando posibles errores de carga. También se ha implementado un nuevo sistema de "lightbox" que permite a los usuarios visualizar imágenes y videos en una ventana emergente, facilitando la presentación de contenido multimedia sin salir de la diapositiva actual. Esto no solo mejora la interactividad durante las presentaciones, sino que también ofrece una experiencia más fluida y profesional. Además, se han optimizado los estilos CSS relacionados con la adaptabilidad de la presentación en pantallas más pequeñas, garantizando que todos los elementos se muestren correctamente en dispositivos móviles.
+
+El impacto para los usuarios es significativo; ahora podrán aprovechar mejor las capacidades multimedia de reveal.js, haciendo que sus presentaciones sean más dinámicas y atractivas. Para el sistema, los cambios realizados en el código optimizan el rendimiento general y minimizan la posibilidad de errores en la carga de medios, asegurando una presentación más estable y confiable.
+
+**Archivos modificados**  
+- README.md: Se corrigió la URL para la imagen del banner de Slides, actualizando el enlace para reflejar la localización correcta.  
+- css/reveal.scss: Se añadieron estilos para ajustar la altura de la cabecera en pantallas pequeñas, mejorando la presentación en dispositivos móviles.  
+- demo.html: Se agregó una sección que muestra cómo usar la nueva funcionalidad de "lightbox" para imágenes y videos, haciendo la demo más interactiva.  
+- js/controllers/overlay.js: Se actualizaron los métodos de previsualización para incluir las nuevas funciones de "lightbox", permitiendo mostrar videos e imágenes de manera más efectiva.  
+- js/reveal.js: Se actualizó la versión de la biblioteca y se integraron nuevos métodos relacionados con la gestión de estados en overlay.  
+- examples/lightbox.html: Se creó un ejemplo utilizando la nueva funcionalidad de "lightbox" para demostrar su uso práctico.  
+
+**Posibles mejoras futuras**  
+- Implementar una funcionalidad de transición más suave entre las diapositivas y las ventanas emergentes.
+- Agregar más opciones de personalización para el "lightbox", como efectos visuales y configuraciones de visualización.
+- Optimizar el rendimiento de carga de los medios para grandes presentaciones con múltiples videos e imágenes.
+- Incluir soporte para más tipos de contenido, como GIFs o archivos multimedia en streaming.
+
+**Posibles problemas o riesgos de la release**  
+- Existe un riesgo potencial de que algunos usuarios no actualicen sus enlaces de recursos multimedia en sus presentaciones, lo que puede resultar en errores de carga.
+- La nueva funcionalidad de "lightbox" podría no ser compatible con navegadores más antiguos, lo que afectaría la experiencia de ciertos usuarios.
+- La optimización en dispositivos móviles podría generar inconsistencias en la visualización en diferentes tamaños de pantalla si no se prueba adecuadamente en todos los dispositivos.
+- Cambios en el sistema de manejo de estados podrían llevar a conflictos si las implementaciones de usuarios dependen de versiones anteriores de funciones.
