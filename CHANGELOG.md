@@ -335,4 +335,30 @@ Para el usuario, estos cambios significan una experiencia más rica y visualment
 - La adaptación de los nuevos enlaces puede ocasionar problemas de carga si no se actualizan correctamente en todos los documentos relacionados.
 - Existen riesgos potenciales de compatibilidad con estilos CSS antiguos, lo que podría llevar a visualizaciones no deseadas en algunos navegadores.
 - La implementación del sistema de lightbox podría causar conflictos con presentaciones que dependan de interacciones previas, especialmente en slides más complejos.
-- Información insuficiente en el diff para detallar el impacto de los cambios realizados en archivos binarios.
+- Información insuficiente en el diff para detallar el impacto de los cambios realizados en archivos binarios.### [Actualización de 5.2.0 a 5.2.1] - 2026-01-29
+
+**Descripción**  
+En esta actualización, se han implementado varios cambios para mejorar la funcionalidad de la biblioteca reveal.js, centrándose en la presentación de contenido multimedia y la usabilidad. Uno de los cambios más significativos es la modificación de la forma en que se manejan los "lightbox" o ventanas emergentes, permitiendo que elementos como imágenes y videos se presenten de manera más atractiva y usable. En particular, se ha introducido un nuevo sistema que utiliza atributos HTML específicos (`data-preview-image`, `data-preview-video`, y `data-preview-link`) para activar estas ventanas emergentes.
+
+Adicionalmente, se ha corregido un error en el que se mostraban enlaces externos que apuntaban a recursos multimedia, asegurando que ahora siempre se utilicen URLs de host seguros. Esta modificación no solo mejora la seguridad de los recursos incluidos, sino que también ofrece a los usuarios una experiencia más fluida al interactuar con presentaciones que incluyen diversos tipos de medios.
+
+El impacto para el usuario se traduce en la posibilidad de visualizar contenido enriquecido sin salir de la presentación, lo que mejora la comprensión y retención de información. Por lo tanto, esta actualización no solo es técnica, sino que se alinea perfectamente con la mejora de la experiencia del usuario, permitiendo presentaciones más dinámicas y atractivas.
+
+**Archivos modificados**  
+- **README.md**: Se actualizó el enlace a Slides para proteger mejor con HTTPS.  
+- **css/reveal.scss**: Se añadió media query condicional para mejorar el diseño en pantallas más pequeñas asegurando un mejor uso del espacio.  
+- **demo.html**: Se incorporaron ejemplos para mostrar la nueva funcionalidad de lightbox, destacando el uso de imágenes y videos.  
+- **js/controllers/overlay.js**: Se reestructuró la lógica para gestionar las ventanas emergentes, facilitando el código y mejorando su rendimiento.  
+- **js/reveal.js**: Se actualizó la versión de reveal.js a 5.2.1 y se implementaron cambios para reflejar el nuevo estado de las ventanas emergentes. 
+
+**Posibles mejoras futuras**  
+- Implementar una funcionalidad para personalizar el diseño de las ventanas emergentes basadas en configuraciones del usuario.  
+- Mejora del soporte para pantallas táctiles, optimizando la interacción en dispositivos móviles.  
+- Desarrollar un sistema de navegación más intuitivo que combine la funcionalidad de lightbox con una interfaz de usuario más interactiva.  
+- Añadir soporte para más tipos de contenido, como integraciones de redes sociales en las presentaciones.
+
+**Posibles problemas o riesgos de la release**  
+- Existe el riesgo de que los cambios en la función de lightbox cause conflictos con otros plugins existentes que utilizan la gestión de enlaces.  
+- La implementación de nuevas media queries puede no ser suficiente para subsanar problemas en todos los dispositivos móviles, lo que puede afectar la presentación.  
+- Se debe tener cuidado de no rompen la compatibilidad hacia atrás con funcionalidades existentes, especialmente para usuarios de versiones anteriores.  
+- Información insuficiente en el diff para detallar este punto sobre problemas de documentación que puedan surgir a raíz de los cambios implementados.
