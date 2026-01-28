@@ -281,4 +281,30 @@ El impacto para los usuarios es significativo; ahora podrán aprovechar mejor la
 - Existe un riesgo potencial de que algunos usuarios no actualicen sus enlaces de recursos multimedia en sus presentaciones, lo que puede resultar en errores de carga.
 - La nueva funcionalidad de "lightbox" podría no ser compatible con navegadores más antiguos, lo que afectaría la experiencia de ciertos usuarios.
 - La optimización en dispositivos móviles podría generar inconsistencias en la visualización en diferentes tamaños de pantalla si no se prueba adecuadamente en todos los dispositivos.
-- Cambios en el sistema de manejo de estados podrían llevar a conflictos si las implementaciones de usuarios dependen de versiones anteriores de funciones.
+- Cambios en el sistema de manejo de estados podrían llevar a conflictos si las implementaciones de usuarios dependen de versiones anteriores de funciones.### [Actualización de 5.2.0 a 5.2.1] - 2026-01-28
+
+**Descripción**  
+En esta actualización, se ha realizado una serie de cambios significativos que mejoran la funcionalidad de la aplicación. En primer lugar, se corrigió la dirección de algunas imágenes y videos que se encontraban en un servidor obsoleto, cambiando las URL de `https://s3.amazonaws.com/` a `https://static.slid.es/`. Este ajuste no solo mejora el rendimiento al eliminar posibles problemas de carga de recursos, sino que también asegura que los enlaces sean más estables y perdurables en el tiempo.
+
+Adicionalmente, se ha introducido una nueva funcionalidad de 'lightbox' que permite a los usuarios ver imágenes y videos en una ventana superpuesta, mejorando la experiencia general al presentar contenido multimedia. Este cambio permite que el contenido se pueda visualizar sin distracciones y de manera más centrada, lo cual es esencial durante presentaciones. Además, se han realizado ajustes en los archivos CSS para garantizar que el contenido se visualice correctamente en dispositivos con pantallas más pequeñas, empleando consultas de medios para adaptar el diseño. En general, estos cambios no solo proporcionan una mejora en la funcionalidad y estabilidad, sino también un impacto positivo en la interacción del usuario.
+
+**Archivos modificados**  
+- `README.md`: Se actualizó la URL de una imagen para reflejar la nueva fuente en `https://static.slid.es/`.  
+- `css/reveal.scss`: Se añadieron consultas de medios para mejorar la visualización en dispositivos con pantallas pequeñas.  
+- `demo.html`: Se introdujo una nueva sección sobre la funcionalidad de la lightbox con ejemplos de uso.  
+- `examples/lightbox.html`: Cambios en el título y se complementó con ejemplos de contenido que se puede usar en la nueva funcionalidad de lightbox.  
+- `js/controllers/overlay.js`: Se renombraron y ajustaron funciones relacionadas con la nueva característica de lightbox, facilitando la previsualización de contenido multimedia.  
+- `js/reveal.js`: Se actualizó la versión de `5.2.0` a `5.2.1`, reflejando los cambios realizados en esta versión.  
+- `package.json`: Se actualizó la versión del paquete a `5.2.1`.  
+
+**Posibles mejoras futuras**  
+- Implementar una función que guarde las preferencias del usuario respecto a la visualización de la lightbox.  
+- Optimizar aún más la carga de recursos cambiando a un sistema de CDN para servir contenido multimedia.  
+- Agregar más opciones de personalización en los estilos para los elementos de la lightbox, permitiendo a los usuarios definir colores y tamaños.  
+- Mejorar la accesibilidad de la aplicación, añadiendo descripciones alternativas para los elementos de contenido multimedia.
+
+**Posibles problemas o riesgos de la release**  
+- Posibles fallos en la carga de recursos multimedia debido a las nuevas URL, si los enlaces no están correctamente actualizados en todas partes.  
+- La nueva funcionalidad de lightbox podría generar confusión si los usuarios no están familiarizados con ella, lo que podría afectar la usabilidad inicial.  
+- Cambios en los estilos CSS podrían generar conflictos con otras funcionalidades existentes, afectando la experiencia de usuario.  
+- Información insuficiente en el diff para detallar los impactos específicos de los eventos de JavaScript relacionados con la nueva funcionalidad de la lightbox.
