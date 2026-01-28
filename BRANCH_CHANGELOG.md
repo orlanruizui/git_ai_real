@@ -419,4 +419,22 @@ Esta estructura asegura un entendimiento completo y contextualizado del `merge`.
 - There is a need to ensure the updates to the slide structure, such as the additional HTML elements and the reorganization, do not disrupt the existing navigation functionalities that users rely upon.
 - Confirm that the new and existing styles in reveal.css accommodate the changes in slide structure, maintaining visual consistency and responsiveness across different devices.
 - It is vital to test the presentation in different environments to ascertain that these changes were merged correctly and do not affect related modules or previous merge inputs negatively.
-- Attention should be given to any potential conflicts arising from the altered presentation identity and slide restructuring, especially in environments using previous versions.
+- Attention should be given to any potential conflicts arising from the altered presentation identity and slide restructuring, especially in environments using previous versions.## Pull Request Title: merge. Created: 2026-01-21T17:05:29Z. Status: open
+- Se ha modificado el título de la página en `index.html` de "reveal.js" a "Axet Reveal Deck", mejorando la identidad del proyecto.
+- Se ha actualizado el contenido de los slides en `index.html`, añadiendo títulos y notas que facilitan la revisión.
+- Se ha introducido un nuevo slide, enriqueciendo la presentación con más contenido.
+- Las notas para el revisor ahora están integradas dentro de la estructura de los slides.
+- Los cambios realizados generan un diff limpio, facilitando la revisión del código.
+
+## Cambios detallados
+
+### UI:
+- **Archivo**: `index.html`
+  - **Tipo de Cambio**: Modificado.
+  - **Detalles del Cambio**: 
+    - **Título de la Página**: Cambiado de "reveal.js" a "Axet Reveal Deck".
+    - **Contenido de Slides**:
+      - **Slide 1**: Antes solo mostraba "Slide 1". Ahora incluye un título `<h2>`, un párrafo descriptivo y una sección `<aside>` con notas para el revisor.
+      - **Slide 2**: Se mantiene igual, simplemente etiquetado como "Slide 2".
+      - **Nuevo Slide 3**: Añadido nuevo slide, incluye un título `<h3>` y un párrafo, proporcionando más estructura al contenido.
+    - **Notas para el Revisor**: Incluidas bajo el primer slide, dentro de un `<aside>` para remarcar su importancia en el proceso de revisión.
