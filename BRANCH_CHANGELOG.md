@@ -312,4 +312,37 @@ Esta estructura asegura un entendimiento completo y contextualizado del `merge`.
 5. Revisar el código HTML completo para asegurar que no existan errores de sintaxis que puedan afectar la renderización.  
 6. Ejecutar herramientas de validación de accesibilidad para asegurar que las nuevas diapositivas cumplen con los estándares pertinentes.  
 7. Confirmar la integridad del cambio de branding revisando otros archivos relacionados y asegurando que el título sea consistente.  
-8. Utilizar `git blame` para identificar y consultar con otros desarrolladores si hay dudas específicas en los cambios.
+8. Utilizar `git blame` para identificar y consultar con otros desarrolladores si hay dudas específicas en los cambios.## Pull Request Title: merge. Created: 2026-01-21T17:05:29Z. Status: open
+- La actualización en el título de la página a "Axet Reveal Deck" ofrece un branding claro, mejorando la identificación de la aplicación.
+- Incorporación de notas en las slides, útil para preparados de presentaciones más ricas e interactivas.
+- Adición de una nueva slide, demostrando mejoras continuas en el contenido de presentación.
+- Cambios centrados en el front-end, mostrando un enfoque en la experiencia del usuario.
+- Modificaciones incluyen mejoras de presentación para los revisores, facilitando el proceso de revisión.
+
+## Cambios detallados
+### UI
+- **index.html**: El título de la página cambió de "reveal.js" a "Axet Reveal Deck", añadiendo identidad de marca.
+- Adición de contenido en las slides: agregando subtítulos y párrafos explicativos en Slide 1 y una nueva Slide 3 para enriquecer el contenido de la presentación.
+
+## Riesgos / puntos de atención
+- Verificar que el cambio del título no afecte a enlaces internos que dependan del nombre original.
+- Asegurarse de que el nuevo contenido sea compatible con las expectativas de los usuarios actuales.
+- Chequear la integridad del documento HTML para evitar problemas con el renderizado.
+
+## Checklist para el revisor
+- [ ] Confirmar que el nuevo título aparece correctamente en el navegador.
+- [ ] Verificar coherencia de formato en las nuevas slides.
+- [ ] Comprobar que las notas no interfieren con el diseño existente.
+- [ ] Validar que todas las slides se muestren correctamente.
+
+## Tips para revisar más rápido
+- Revisa primero el cambio en el título del HTML para cerciorarte del branding.
+- Usa el comando `git diff` para identificar cambios semánticos rápidamente.
+- Revisa las nuevas adiciones de contenido (slides y notas) para coherencia.
+- Asegúrate que no haya etiquetas HTML mal cerradas o sin coincidir.
+- Utiliza un navegador web para ver cómo se reflejan los cambios estéticos en tiempo real.
+- Asegúrate de que el archivo HTML se cierre correctamente (línea final del archivo).
+- Apóyate en herramientas como Prettier para validar el formato y estructura del HTML.
+- Verifica que el fluir entre slides sea correcto y sin errores de navegación.
+- Comprueba que las notas para el revisor sean claras y visibles sólo cuando deben ser.
+- Examina si el orden visual y estético sigue cumpliendo con las mejores prácticas de UI.
