@@ -345,4 +345,38 @@ Esta estructura asegura un entendimiento completo y contextualizado del `merge`.
 - Apóyate en herramientas como Prettier para validar el formato y estructura del HTML.
 - Verifica que el fluir entre slides sea correcto y sin errores de navegación.
 - Comprueba que las notas para el revisor sean claras y visibles sólo cuando deben ser.
-- Examina si el orden visual y estético sigue cumpliendo con las mejores prácticas de UI.
+- Examina si el orden visual y estético sigue cumpliendo con las mejores prácticas de UI.## Pull Request Title: merge. Created: 2026-01-21T17:05:29Z. Status: open
+- Se actualizó el título de la página HTML para mejorar la claridad.
+- Se añadió una nota dentro de la sección HTML, mejorando la guía para los revisores.
+- Se agregó una tercera diapositiva, promoviendo mayores oportunidades para pruebas y revisiones.
+- Se añadió nueva estructura de títulos y párrafos en diapositivas, mejorando la organización del contenido.
+- Los cambios sugeridos facilitan futuras modificaciones y mejoras.
+
+## Cambios detallados
+- **UI**
+  - `index.html`: El título de la página fue cambiado de "reveal.js" a "Axet Reveal Deck".
+  - Se implementó una nueva estructura de títulos en las secciones de diapositivas (`<h2>` en Slide 1, `<h3>` en Slide 3).
+  - Se agregaron párrafos descriptivos en las diapositivas para mayor claridad del contenido.
+  - Una nueva sección para Slide 3 fue añadida para mejorar el flujo de presentación.
+
+## Riesgos / puntos de atención
+- Verificar que el nuevo título HTML no afecte la indexación en motores de búsqueda o herramientas de analítica web.
+- Asegurarse de que los cambios en las diapositivas no interfieran con los estilos CSS ya implementados.
+
+## Checklist para el revisor
+- [ ] Confirmar que el título de la página se actualiza correctamente sin errores de estilo.
+- [ ] Verificar que las nuevas diapositivas se muestren correctamente y el texto sea legible.
+- [ ] Asegurar que la nota agregada no aparezca en la versión visual para el usuario final.
+- [ ] Probar todas las diapositivas para ver si se despliegan correctamente en distintas resoluciones.
+
+## Tips para revisar más rápido
+1. Inicia revisando los cambios visuales en la interfaz abriendo `index.html` en el navegador.
+2. Usa `git diff index.html` para validar los cambios de texto en los elementos HTML.
+3. Verifica el título de la página inspeccionando el elemento `<title>` en el inspector del navegador.
+4. Revisa el flujo de las diapositivas mediante herramientas de presentación para asegurar que los cambios se integran correctamente.
+5. Comprueba que la nota dentro del `<aside>` no afecta otras etiquetas.
+6. Probar la presentación en diferentes resoluciones para validar el diseño responsive.
+7. Utiliza validadores de HTML/CSS para asegurar que no hay errores sintácticos.
+8. Revisa los logs de la consola del navegador para prevenir errores de JavaScript.
+9. Utiliza herramientas de comparación de versiones para asegurar que no hay inconsistencias en el código.
+10. Asegúrate de que los estilos CSS asociados a los nuevos elementos mantienen la coherencia visual del proyecto.
