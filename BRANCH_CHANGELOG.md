@@ -437,4 +437,16 @@ Esta estructura asegura un entendimiento completo y contextualizado del `merge`.
       - **Slide 1**: Antes solo mostraba "Slide 1". Ahora incluye un título `<h2>`, un párrafo descriptivo y una sección `<aside>` con notas para el revisor.
       - **Slide 2**: Se mantiene igual, simplemente etiquetado como "Slide 2".
       - **Nuevo Slide 3**: Añadido nuevo slide, incluye un título `<h3>` y un párrafo, proporcionando más estructura al contenido.
-    - **Notas para el Revisor**: Incluidas bajo el primer slide, dentro de un `<aside>` para remarcar su importancia en el proceso de revisión.
+    - **Notas para el Revisor**: Incluidas bajo el primer slide, dentro de un `<aside>` para remarcar su importancia en el proceso de revisión.```html
+<h3>Cambios recientes en el archivo index.html del proyecto reveal.js</h3>
+
+<p>En el archivo index.html se ha realizado un cambio significativo en el título del documento. Anteriormente, el título era "reveal.js". Este ha sido modificado a "Axet Reveal Deck", reforzando así la identidad del proyecto. Este cambio es parte de una serie de modificaciones para mejorar la presentación y estructura del archivo HTML principal.</p>
+
+<p>Además, en la sección de las diapositivas, se han hecho varios ajustes. La primera diapositiva había sido simplemente "Slide 1", pero ahora ha sido refinada para incluir un encabezado de segundo nivel <code>&lt;h2&gt;</code> con el texto "Slide 1", lo cual ayuda a estructurar mejor el contenido. También se ha añadido un párrafo explicativo debajo del encabezado y un elemento <code>&lt;aside&gt;</code> con una clase "notes" que contiene una nota especial para el revisor, indicando que estos cambios son para demostrar el flujo de notas de revisión. Esto mejora tanto la claridad del propósito como la legibilidad del contenido para revisores y espectadores.</p>
+
+<p>Se ha mantenido "Slide 2" como estaba anteriormente, sin agregar contenido adicional o estructura avanzada, permitiendo que sirva como un punto de comparación limpio entre los cambios.</p>
+
+<p>Un cambio adicional importante es la inclusión de una nueva diapositiva, "Slide 3". Esta diapositiva incluye un encabezado de tercer nivel <code>&lt;h3&gt;</code> con el texto "Slide 3" y un párrafo que explica que esta tercera diapositiva ha sido añadida para facilitar un diff limpio, lo que significa que estas inserciones proporcionan claridad en las diferencias que necesitan ser revisadas por los colaboradores del proyecto.</p>
+
+<p>Estos cambios reflejan un esfuerzo concienzudo por mejorar la claridad de la estructura del proyecto, facilitar la revisión durante el proceso de desarrollo y asegurar que los objetivos del proyecto se reflejen claramente en la documentación del front-end.</p>
+```
