@@ -15,4 +15,19 @@ Se añadió un nuevo, tercer slide que presenta un `<h3>` con el texto "Slide 3"
 
 El documento HTML ahora finaliza adecuadamente con una línea tras el cierre de la etiqueta `</html>`, corrigiendo así un pequeño problema potencial de compatibilidad o consistencia con prácticas recomendadas de codificación HTML.
 
-La estructuración y comentarios adicionales sugieren un enfoque hacia la mejora de la usabilidad y revisión del contenido de la presentación, asegurando que el flujo de información sea más coherente y dirigido a audiencias específicas, en este caso, revisores y desarrolladores que están evaluando los cambios aportados por el merge.
+La estructuración y comentarios adicionales sugieren un enfoque hacia la mejora de la usabilidad y revisión del contenido de la presentación, asegurando que el flujo de información sea más coherente y dirigido a audiencias específicas, en este caso, revisores y desarrolladores que están evaluando los cambios aportados por el merge.## Pull Request: merge  
+Estado: open · Fecha: 2026-01-21T17:05:29Z  
+
+### Resumen de cambios  
+Se han realizado varias modificaciones en el archivo `index.html` de la presentación HTML. El título de la página fue cambiado de "reveal.js" a "Axet Reveal Deck". Además, se reestructuró el contenido de los slides, añadiendo nuevos elementos como títulos, párrafos y notas para los revisores.
+
+### Cambios detallados  
+**UI:**  
+- **Archivo `index.html`:** 
+  - El título HTML fue modificado de "reveal.js" a "Axet Reveal Deck" para reflejar la nueva identidad del proyecto.
+  - El primer slide ahora incluye un título `<h2>` y un párrafo adicional para proporcionar contexto sobre el cambio realizado.
+  - Se agregó una `nota` en un elemento `<aside>` para proporcionar información adicional al revisor, indicando que es un cambio de prueba para activar el proceso de revisión.
+  - El segundo slide no sufrió cambios en cuanto a estructura o contenido.
+  - Se añadió un tercer slide, que incluye un título `<h3>` y un párrafo que detalla que este fue agregado para generar un diff limpio y fácil de revisar. Esto ayuda a la comprensión y mejor visualización de los cambios introducidos.  
+
+Los cambios están organizados de forma que promueven la claridad y transparencia durante la revisión, facilitando al equipo comprender la intención detrás de cada modificación. Estos ajustes contribuyen tanto a mejorar la estética y usabilidad del documento de presentación, como a proporcionar un registro claro de las notas de revisión para futuras referencias.
