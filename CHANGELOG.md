@@ -361,4 +361,27 @@ El impacto para el usuario se traduce en la posibilidad de visualizar contenido 
 - Existe el riesgo de que los cambios en la función de lightbox cause conflictos con otros plugins existentes que utilizan la gestión de enlaces.  
 - La implementación de nuevas media queries puede no ser suficiente para subsanar problemas en todos los dispositivos móviles, lo que puede afectar la presentación.  
 - Se debe tener cuidado de no rompen la compatibilidad hacia atrás con funcionalidades existentes, especialmente para usuarios de versiones anteriores.  
-- Información insuficiente en el diff para detallar este punto sobre problemas de documentación que puedan surgir a raíz de los cambios implementados.
+- Información insuficiente en el diff para detallar este punto sobre problemas de documentación que puedan surgir a raíz de los cambios implementados.### [Actualización de 5.2.0 a 5.2.1] - 2026-01-29
+
+**Descripción**  
+La actualización a la versión 5.2.1 trae consigo varias mejoras y ajustes significativos que buscan optimizar la experiencia del usuario y fortalecer la funcionalidad del sistema. Principalmente, se ha modificado la forma en que se gestionan las vistas previas de enlaces, imágenes y videos a través de una nueva funcionalidad de 'lightbox', la cual permite a los usuarios visionar contenidos multimedia de manera más intuitiva y atractiva. La implementación de características como `data-preview-image` y `data-preview-video` asegura que los elementos multimedia sean accesibles de manera eficiente, mejorando así la interacción del usuario con la presentación. Además, se ha corregido la forma en que se manejan los selectores para los enlaces, garantizando una mayor precisión en su funcionamiento. Se estima que estas mejoras no solo enriquecen la funcionalidad de la herramienta, sino que también facilitan la creación de presentaciones visualmente impactantes, lo que puede atraer a un público más amplio y promover una mejor retención de información en las presentaciones.
+
+**Archivos modificados**  
+- **README.md**: Actualización de la URL de la imagen de banner de "Slides" para mejorar la accesibilidad.  
+- **css/reveal.scss**: Adición de estilos responsivos para el encabezado de la vista 'overlay' en pantallas más pequeñas, para mejorar la presentación.  
+- **demo.html**: Se incluyen secciones adicionales que muestran cómo utilizar la nueva funcionalidad de 'lightbox', promoviendo el uso óptimo de las nuevas características.  
+- **examples/lightbox.html**: Modificación del título para reflejar la nueva funcionalidad de 'lightbox'.  
+- **js/controllers/overlay.js**: Cambios en la gestión de la lógica de la superposición; mejora del flujo de datos al abrir y cerrar la vista previa.  
+- **js/reveal.js**: Se actualiza la versión del framework de 5.2.0 a 5.2.1, asegurando que la biblioteca esté al día.  
+
+**Posibles mejoras futuras**  
+- Mejorar el rendimiento de carga de imágenes y videos en la funcionalidad de 'lightbox' para dispositivos móviles.  
+- Incluir nuevas opciones de personalización para los elementos visuales en las presentaciones.  
+- Desarrollar un sistema de gestión de recursos multimedia más eficiente dentro del framework.  
+- Ampliar la documentación y tutoriales relacionados con el uso de la nueva funcionalidad de 'lightbox' para facilitar su adopción por los usuarios.  
+
+**Posibles problemas o riesgos de la release**  
+- La nueva funcionalidad de 'lightbox' podría no ser compatible con versiones anteriores de navegadores, afectando a los usuarios que no han actualizado.  
+- Es posible que algunos usuarios experimenten conflictos menores al usar los nuevos selectores, ya que se han cambiado algunos nombres en el código.  
+- La carga de elementos multimedia podría causar problemas de rendimiento en dispositivos más antiguos o con limitaciones de hardware.  
+- Información insuficiente en el diff para detallar este punto respecto a las pruebas realizadas, lo que podría llevar a errores no detectados en producción.
